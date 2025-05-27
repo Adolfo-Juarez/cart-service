@@ -14,8 +14,8 @@ app.get('/', (req, res) => {
 
 sequelize.sync({ alter: true })
     .then(() => {
-        app.listen(3002, () => {
-            console.log('Server is running on port 3002');
+        app.listen(3032, () => {
+            console.log('Server is running on port 3032');
         });
     })
     .catch((error) => {
