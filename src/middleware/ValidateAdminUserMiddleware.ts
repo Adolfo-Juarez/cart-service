@@ -22,7 +22,7 @@ export default async function ValidateAdminUserMiddleware(req, res, next) {
     }
 
     try {
-        const response = await fetch(process.env.USER_SERVICE + '/user', {
+        const response = await fetch(`${process.env.USER_SERVICE}/user`.replace(/(?<!https?:)\/\/+/g, '/'), {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
